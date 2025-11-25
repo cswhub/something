@@ -1,0 +1,9 @@
+**/.idea/
+*.log
+**/__pycache__/
+
+
+**/.vscode
+**/dist/
+**/node_modules/
+
