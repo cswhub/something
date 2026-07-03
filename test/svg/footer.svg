@@ -1,0 +1,220 @@
+              <svg
+                width="100%"
+                height="170"
+                viewBox="0 0 700 170"
+                xmlns="http://www.w3.org/2000/svg"
+                style="display: block"
+              >
+                <!-- 1. 背景部分 (保持深色风格) -->
+                <rect width="100%" height="170" fill="#1e293b" rx="0" ry="0" />
+
+                <!-- 2. 装饰元素 (保持原有风格) -->
+                <!-- 右上角大圆 -->
+                <circle cx="550" cy="20" r="60" fill="#3b82f6" opacity="0.2" />
+                <!-- 左下角小圆 -->
+                <circle cx="50" cy="120" r="40" fill="#3b82f6" opacity="0.1" />
+                <!-- 顶部小线条 -->
+
+                <text
+                  x="40"
+                  y="30"
+                  font-family="Alibaba PuHuiTi, sans-serif"
+                  font-size="15"
+                  fill="#CAD3DF"
+                  letter-spacing="1"
+                >
+                  免责声明：
+                </text>
+
+                <line
+                  x1="40"
+                  y1="40"
+                  x2="110"
+                  y2="40"
+                  stroke="#06b6d4"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+
+                <!-- 3. 文字信息区域 -->
+                <!-- 免责声明 -->
+                <text
+                  x="40"
+                  y="60"
+                  font-family="Alibaba PuHuiTi, sans-serif"
+                  font-size="10"
+                  fill="#94a3b8"
+                  letter-spacing="1"
+                >
+                  本研究报告由新纪元期货股份有限公司撰写，报告中所提供的信息均来源于公开资料，我们对这些信息的准确性和完整性不作任
+                </text>
+                <text
+                  x="40"
+                  y="70"
+                  font-family="Alibaba PuHuiTi, sans-serif"
+                  font-size="10"
+                  fill="#94a3b8"
+                  letter-spacing="1"
+                >
+                  何保证。我们力求报告内容的客观、公正，但文中的观点、结论和建议仅供参考。本报告中的信息或所表述的意见并不构成对任
+                </text>
+                <text
+                  x="40"
+                  y="80"
+                  font-family="Alibaba PuHuiTi, sans-serif"
+                  font-size="10"
+                  fill="#94a3b8"
+                  letter-spacing="1"
+                >
+                  何人的投资建议，投资者据此做出的任何投资决策与本公司和作者无关。在任何情况下，本公司不对任何人因使用本报告中的任
+                </text>
+                <text
+                  x="40"
+                  y="90"
+                  font-family="Alibaba PuHuiTi, sans-serif"
+                  font-size="10"
+                  fill="#94a3b8"
+                  letter-spacing="1"
+                >
+                  何内容所引致的任何损失负任何责任。
+                </text>
+                <!-- 分析师信息 -->
+                <text
+                  x="40"
+                  y="110"
+                  font-family="Alibaba PuHuiTi, sans-serif"
+                  font-size="15"
+                  fill="#CAD3DF"
+                  letter-spacing="1"
+                >
+                  分析师团队：
+                </text>
+
+                <line
+                  x1="40"
+                  y1="120"
+                  x2="128"
+                  y2="120"
+                  stroke="#06b6d4"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+
+                <text
+                  x="40"
+                  y="135"
+                  font-family="Alibaba PuHuiTi, sans-serif"
+                  font-size="10"
+                  font-weight="bold"
+                  fill="#94a3b8"
+                >
+                  张三
+                </text>
+                <text
+                  x="40"
+                  y="145"
+                  font-family="Alibaba PuHuiTi, sans-serif"
+                  font-size="10"
+                  font-weight="bold"
+                  fill="#94a3b8"
+                >
+                  F3012252
+                </text>
+                <text
+                  x="40"
+                  y="155"
+                  font-family="Alibaba PuHuiTi, sans-serif"
+                  font-size="10"
+                  font-weight="bold"
+                  fill="#94a3b8"
+                >
+                  Z0012892
+                </text>
+
+                <text
+                  x="100"
+                  y="135"
+                  font-family="Alibaba PuHuiTi, sans-serif"
+                  font-size="10"
+                  font-weight="bold"
+                  fill="#94a3b8"
+                >
+                  张三
+                </text>
+                <text
+                  x="100"
+                  y="145"
+                  font-family="Alibaba PuHuiTi, sans-serif"
+                  font-size="10"
+                  font-weight="bold"
+                  fill="#94a3b8"
+                >
+                  F3012252
+                </text>
+                <text
+                  x="100"
+                  y="155"
+                  font-family="Alibaba PuHuiTi, sans-serif"
+                  font-size="10"
+                  font-weight="bold"
+                  fill="#94a3b8"
+                >
+                  Z0012892
+                </text>
+
+                <text
+                  x="160"
+                  y="135"
+                  font-family="Alibaba PuHuiTi, sans-serif"
+                  font-size="10"
+                  font-weight="bold"
+                  fill="#94a3b8"
+                >
+                  张三
+                </text>
+                <text
+                  x="160"
+                  y="145"
+                  font-family="Alibaba PuHuiTi, sans-serif"
+                  font-size="10"
+                  font-weight="bold"
+                  fill="#94a3b8"
+                >
+                  F3012252
+                </text>
+                <text
+                  x="160"
+                  y="155"
+                  font-family="Alibaba PuHuiTi, sans-serif"
+                  font-size="10"
+                  font-weight="bold"
+                  fill="#94a3b8"
+                >
+                  Z0012892
+                </text>
+
+                <!-- 4. 二维码预留区域 (右下角) -->
+                <!-- 这里画了一个虚线矩形作为二维码占位符，实际使用时可以替换成真实的二维码图片 -->
+                <rect
+                  x="560"
+                  y="90"
+                  width="100"
+                  height="70"
+                  fill="#1e293b"
+                  stroke="#60a5fa"
+                  stroke-width="2"
+                  stroke-dasharray="4"
+                  rx="4"
+                />
+                <!-- 二维码提示文字 -->
+                <text
+                  x="610"
+                  y="130"
+                  font-family="Alibaba PuHuiTi, sans-serif"
+                  font-size="10"
+                  fill="#60a5fa"
+                  text-anchor="middle"
+                >
+                  扫码关注
+                </text>
+              </svg>

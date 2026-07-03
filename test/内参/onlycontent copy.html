@@ -1,0 +1,302 @@
+<style>
+  /* 1. 重置 body 边距，防止出现默认留白 */
+  .report-wrapper {
+    font-family: "Alibaba PuHuiTi", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0; /* 关键：去除body默认外边距 */
+    padding: 0; /* 关键：去除body默认内边距 */
+    background-color: #f9f9f9; /* 保持背景色 */
+  }
+
+  /* 2. 针对打印的特殊优化：尝试覆盖浏览器默认页边距 */
+  @media print {
+    @page {
+      margin: 0; /* 尝试将打印页边距设为0 */
+    }
+    .report-wrapper {
+      -webkit-print-color-adjust: exact;
+      color-adjust: exact;
+    }
+  }
+
+  /* 3. 容器样式优化 */
+  .container {
+    max-width: 100%; /* 尽量撑满 */
+    padding: 10px; /* 适当减少内边距，防止被挤出边界 */
+    box-sizing: border-box; /* 确保padding包含在width内 */
+  }
+
+  /* 以下保持原有样式，仅微调 */
+  .header {
+    text-align: center;
+    border-bottom: 2px solid #005f73;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+  }
+  .title {
+    color: #ae2012;
+    font-size: 20px;
+    margin: 8px 0;
+  }
+  .date {
+    color: #6c757d;
+    font-size: 13px;
+  }
+  .section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  .sub-title {
+    color: #005f73;
+    border-left: 3px solid #ee9b00;
+    padding-left: 8px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  .core-point {
+    background-color: #ffddd2;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 8px 0;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .market-data {
+    margin: 12px 0;
+  }
+  .data-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 13px;
+  }
+  .weak {
+    color: #bb3333;
+  }
+  .strong {
+    color: #0a9e5d;
+  }
+  .neutral {
+    color: #6c757d;
+  }
+  .footer {
+    text-align: center;
+    font-size: 11px;
+    color: #6c757d;
+    margin-top: 20px;
+    padding-top: 8px;
+    border-top: 1px solid #eee;
+  }
+  .tag {
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    margin-right: 4px;
+  }
+  .tag.red {
+    background-color: #ae2012;
+  }
+  .tag.green {
+    background-color: #005f73;
+  }
+  .tag.blue {
+    background-color: #023e8a;
+  }
+  /* --- 升级版：分析师名单样式 (双证号) --- */
+  .analyst-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  .analyst-item {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    border-left: 4px solid #005f73; /* 左侧加深色条增加质感 */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  .analyst-info {
+    flex: 1;
+  } /* 左侧信息自适应宽度 */
+  .analyst-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 15px;
+    display: block;
+  }
+  .analyst-certs {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    gap: 15px; /* 两个证号之间的间距 */
+  }
+  .cert-tag {
+    background-color: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    color: #495057;
+  }
+
+  /* --- 免责声明样式 --- */
+  .disclaimer-box {
+    background-color: #fff;
+    border: 1px dashed #ccc;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 11px;
+    color: #666;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  .disclaimer-title {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+  }
+  .license-info {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ae2012;
+    text-align: center;
+  }
+</style>
+<div class="report-wrapper">
+  <div class="header">
+    <div class="title">【中盛期货·投资内参】</div>
+    <div class="date">2026年5月21日 星期四</div>
+    <div class="motto">中东局势缓和，能化板块多数调整</div>
+  </div>
+
+  <!-- 核心观点 -->
+  <div class="section">
+    <h2>💡 核心观点汇总</h2>
+
+    <div class="core-point">
+      地缘情绪主导节奏，原油波动加剧。PTA走势相对强于PX及乙二醇；甲醇、PP区间震荡。
+    </div>
+  </div>
+
+  <!-- 宏观及金融期货 -->
+  <div class="section">
+    <h2>📈 宏观与基本面</h2>
+
+    <div class="sub-title">房地产数据</div>
+    &nbsp;&nbsp;&nbsp;&nbsp;1-4月房屋新开工面积下降22%，施工面积降12.1%（创2025年以来新低）。
+    <div class="sub-title">销售端</div>
+    <ul>
+      <li>30个大中城市商品房成交面积连续3周下降，楼市刺激政策效用边际减弱。</li>
+    </ul>
+    <div class="sub-title">政策面</div>
+    <ul>
+      <li>
+        央行公开市场净投放995亿元；发改委强调扩大有效投资，整治“内卷式”竞争。
+      </li>
+    </ul>
+    <h2>📈 股指</h2>
+    <!-- <div class="sub-title">股指</div> -->
+    <ul>
+      <li>
+        受原油下跌影响，油气、煤炭走弱，芯片等概念重挫。短期情绪谨慎，注意反复风险。
+      </li>
+      <!-- <li>
+        <strong>黄金：</strong
+        >美联储纪要显示若通胀持续高于2%可能需收紧政策。美伊谈判前景不明朗，金价短线博弈加剧。
+      </li> -->
+    </ul>
+  </div>
+
+  <!-- 财经周历 -->
+  <div class="section">
+    <h2>📅 财经周历 (05-25 至 05-29)</h2>
+    <ul>
+      <li>
+        <strong>周一：</strong>中国1-4月固投、工业增加值；美国NAHB房产市场指数。
+      </li>
+      <li>
+        <strong>周二：</strong>美国ADP就业人数；美联储理事沃勒讲话；加拿大CPI。
+      </li>
+      <li>
+        <strong>周三：</strong>中国5月LPR；美国/欧洲/德国/英国CPI数据发布。
+      </li>
+      <li>
+        <strong>周四：</strong>美联储公布会议纪要；美国初请失业金人数；PMI数据。
+      </li>
+      <li><strong>周五：</strong>美国密歇根大学消费者信心指数；日本CPI。</li>
+    </ul>
+  </div>
+
+  <!-- 升级版：分析师名单 (包含双证号) -->
+  <div class="section">
+    <h2 style="margin-top: 0">✍️ 分析师团队</h2>
+    <ul class="analyst-list">
+      <!-- 分析师 1 -->
+      <li class="analyst-item">
+        <div class="analyst-info">
+          <span class="analyst-name">张三 (宏观策略)</span>
+          <div class="analyst-certs">
+            <span class="cert-tag">从业资格证号：F0123456</span>
+            <span class="cert-tag">投资咨询证号：Z0012345</span>
+          </div>
+        </div>
+      </li>
+      <!-- 分析师 2 -->
+      <li class="analyst-item">
+        <div class="analyst-info">
+          <span class="analyst-name">李四 (能源化工)</span>
+          <div class="analyst-certs">
+            <span class="cert-tag">从业资格证号：F0654321</span>
+            <span class="cert-tag">投资咨询证号：Z0065432</span>
+          </div>
+        </div>
+      </li>
+      <!-- 分析师 3 -->
+      <li class="analyst-item">
+        <div class="analyst-info">
+          <span class="analyst-name">王五 (农产品)</span>
+          <div class="analyst-certs">
+            <span class="cert-tag">从业资格证号：F0112233</span>
+            <span class="cert-tag">投资咨询证号：Z0011223</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 免责声明与许可证号 -->
+  <div class="section">
+    <div class="disclaimer-box">
+      <span class="disclaimer-title">⚠️ 免责声明与风险提示</span>
+      本报告中的信息均来源于公开资料，本公司对这些信息的准确性和完整性不作任何保证。报告中的内容和意见仅供参考，并不构成对所述品种买卖的出价或征价。投资者据此做出的任何投资决策与本公司和作者无关。
+      <br /><br />
+      在任何情况下，本公司不对任何人因使用本报告中的任何内容所引致的任何损失负任何责任。市场有风险，投资需谨慎。请务必注意投资风险，理性投资。
+
+      <div class="license-info">
+        中盛期货有限公司<br />
+        中国证监会投资咨询业务资格许可证号：ZX0123
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>
+      免责声明：本报告由中盛期货撰写，信息来源于公开资料，不构成投资建议。市场有风险，投资需谨慎。
+    </p>
+    <p>整理时间：2026-05-22 | 来源：中盛期货投资内参</p>
+  </div>
+</div>
